@@ -1,0 +1,15 @@
+Browser->Server HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server->Browser HTML-Content
+
+Browser->Server HTTP GET exampleapp/main.css
+Server->Browser main.css *CSS STYLESHEET*
+
+Browser->Server HTTP GET exampleapp/spa.js
+Server->Browser main.js *JAVASCRIPT CODE*
+
+Browser->Server HTTP GET exampleapp/data.json
+Server->Browser data.json Content:``[{"content":"yo","date":"2021-11-18T03:29:32.443Z"},...]``
+*json objects containing the note content and their dates*
+
+Browser->Server HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Server->Browser favicon.ico *FAVICON IMAGE*

@@ -1,0 +1,19 @@
+Browser->Server Post Status:302 Content:``note=I+posted+some+more+words+on+the+page%21``
+
+*Page is reloaded
+
+Browser->Server HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server->Browser HTML-Content
+
+Browser->Server HTTP GET exampleapp/main.css
+Server->Browser main.css *CSS STYLESHEET*
+
+Browser->Server HTTP GET exampleapp/main.js
+Server->Browser main.js *JAVASCRIPT CODE*
+
+Browser->Server HTTP GET exampleapp/data.json
+Server->Browser data.json Content:``[{"content":"HAHAHAA","date":"2021-11-18T02:59:05.658Z"},...]`` 
+*json objects containing the note content and their dates*
+
+Browser->Server HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Server->Browser favicon.ico *FAVICON IMAGE*
